@@ -38,7 +38,7 @@ alias heroku='docker run \
   -v $HOME/.netrc:/root/.netrc \
   -v $PWD:/usr/src/app \
   -w /usr/src/app \
-  heroku-toolbelt'
+  technekes/heroku-toolbelt'
 ```
 
 Now simply reference the new alias.
