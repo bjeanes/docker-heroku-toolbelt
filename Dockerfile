@@ -2,6 +2,7 @@ FROM ruby:slim
 
 RUN \
   apt-get update && apt-get install -y --no-install-recommends \
+    curl \
     git \
     openssh-client \
     postgresql-client \
@@ -11,7 +12,5 @@ RUN \
 RUN \
   curl https://cli-assets.heroku.com/install.sh | sh && \
   heroku --version
-
-ENV PATH $PATH:/usr/local/heroku/bin
 
 ENTRYPOINT ["heroku"]
